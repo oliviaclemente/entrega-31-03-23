@@ -19,16 +19,15 @@ class Database:
                             (num_discos, torre_origen, torre_destino, torre_auxiliar, pasos))
         self.conn.commit()
     
+    
     def obtener_soluciones(self):
         self.cursor.execute("SELECT * FROM soluciones")
         return self.cursor.fetchall()
-
+    
 from database import Database
 from config import Config
 
 def resolver_torre_hanoi(num_discos, torre_origen, torre_destino, torre_auxiliar):
-    # ...
     pasos = 0
-    # ...
     db = Database('soluciones.db')
     db.agregar_solucion(num_discos, torre_origen, torre_destino, torre_auxiliar, pasos)

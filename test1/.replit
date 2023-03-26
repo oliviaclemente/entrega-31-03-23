@@ -1,0 +1,9 @@
+run = "python main.py"
+language = "python"
+
+run = "python main.py"
+language = "python"
+env = {
+    MY_VAR = "mi_valor_de_variable"
+}
+
